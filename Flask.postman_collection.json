@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "30354cef-0a70-4b6f-ad3f-eeb81b2b4196",
+		"name": "Flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37801793"
+	},
+	"item": [
+		{
+			"name": "usersignup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"John Doe\",\r\n    \"email\":\"johndoe@gmail.com\",\r\n    \"mobile\":8089785837,\r\n    \"username\":\"johndoe123\",\r\n    \"password\":\"johndoe321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "userlogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"johndoe123\",\r\n    \"password\":\"johndoe321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/login"
+			},
+			"response": []
+		},
+		{
+			"name": "firstpost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"johndoe123\",\r\n    \"title\":\"johnsfirstpost\",\r\n    \"description\":\"johnsfirstpostdescription\",\r\n    \"tags\":\"johndoe123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/post"
+			},
+			"response": []
+		},
+		{
+			"name": "firstpostpublish",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"johndoe123\",\r\n    \"title\":\"johnsfirstpost\",\r\n    \"description\":\"johnsfirstpostdescription\",\r\n    \"tags\":\"johndoe123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/post/1/publish"
+			},
+			"response": []
+		},
+		{
+			"name": "seondpost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"johndoe123\",\r\n    \"title\":\"johnssecondtpost\",\r\n    \"description\":\"johnssecondpostdescription\",\r\n    \"tags\":\"johndoe123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/post"
+			},
+			"response": []
+		},
+		{
+			"name": "secondpostpublish",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"johndoe123\",\r\n    \"title\":\"johnssecondtpost\",\r\n    \"description\":\"johnssecondpostdescription\",\r\n    \"tags\":\"johndoe123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/post/2/publish"
+			},
+			"response": []
+		},
+		{
+			"name": "secondpostlike",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"johndoe123\",\r\n    \"title\":\"johnssecondtpost\",\r\n    \"description\":\"johnssecondpostdescription\",\r\n    \"tags\":\"johndoe123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/post/2/like"
+			},
+			"response": []
+		},
+		{
+			"name": "listofposts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/posts?\"page\"=1&\"perpage\"=3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "\"page\"",
+							"value": "1"
+						},
+						{
+							"key": "\"perpage\"",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
